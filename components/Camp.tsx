@@ -1,3 +1,4 @@
+import { PEOPLE_URL } from "@/constants";
 import Image from "next/image";
 
 interface CampProps {
@@ -27,6 +28,22 @@ const CampSite = ({
             <p className="regular-14 text-white">{subtitle}</p>
           </div>
         </div>
+
+        <div className="flexCenter gap-6">
+          <span className="flex -space-x-4 overflow-hidden">
+            {PEOPLE_URL.map((url) => (
+              <Image
+                className="inline-block h-10 w-10 rounded-full"
+                src={url}
+                key={url}
+                alt="person"
+                width={52}
+                height={52}
+              />
+            ))}
+          </span>
+          <p className="bold-16 md:bold-20  text-white">{peopleJoined}</p>
+        </div>
       </div>
     </div>
   );
@@ -41,6 +58,13 @@ const Camp = () => {
           title="Putuk Truno Camp"
           subtitle="Prigen, Pasuruan"
           peopleJoined="50+ Joined"
+        />
+
+        <CampSite
+          backgroundImage="bg-bg-img-2"
+          title="Mountain View"
+          subtitle="Somewhere in the Wild"
+          peopleJoined="35+ Joined"
         />
       </div>
     </section>
