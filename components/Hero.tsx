@@ -8,7 +8,7 @@ const Hero = () => {
     <section className=" max-container padding-container flex flex-col gap-20 padding-y-10 padding-bottom-2 md:gap-28 lg:py-20 xl:flex-row">
       <div className="hero-map" />
       {/* LEFT SIDE */}
-      <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
+      <div className="relative z-20 flex flex-1 flex-col xl:w-1/2 mt-5">
         <Image
           src="/camp.svg"
           alt="camp"
